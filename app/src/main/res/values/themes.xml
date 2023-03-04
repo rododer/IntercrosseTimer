@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.IntercrosseTimer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/clr1</item>
+        <item name="colorPrimaryVariant">@color/clr3</item>
+        <item name="colorOnPrimary">@color/nearwhite</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/clr2</item>
+        <item name="colorSecondaryVariant">@color/clr4</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

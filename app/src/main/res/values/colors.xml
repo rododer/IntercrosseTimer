@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="clr1">#FF7B98B7</color>
+    <color name="clr2">#FF888554</color>
+    <color name="clr3">#FF738797</color>
+    <color name="clr4">#FF8B674D</color>
+    <color name="clr5">#FF171D26</color>
+    <color name="nearblack">#FF202020</color>
+    <color name="black">#FF000000</color>
+    <color name="nearwhite">#FFECEAEF</color>
+    <color name="redBackground">#830000</color>
+    <color name="activated">#AE1111</color>
+    <color name="activatedDark">#FFFFFF</color>
+</resources>
