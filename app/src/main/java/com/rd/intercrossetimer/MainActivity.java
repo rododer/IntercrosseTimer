@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button closePopupBtn;
     private PopupWindow popupWindow;
-    private RelativeLayout linearLayout1;
+    private LinearLayout linearLayout1;
 
     private long mLastClickTimeCTime, mLastClickTimeVTime, mLastClickTimeVibr, mLastClickTimeSwt, mLastClickTimeTTime = 0;
 
