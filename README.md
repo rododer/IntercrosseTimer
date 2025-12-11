@@ -31,8 +31,7 @@ A 5-second timer (time per player)
 
 The timer can be controlled via the volume buttons:
 
-Volume down: restart the timer
-
-Volume up: pause or resume the timer
+- Volume down: restart the timer
+- Volume up: pause or resume the timer
 
 Haptic feedback can be added through vibration.
