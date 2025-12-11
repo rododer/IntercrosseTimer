@@ -25,7 +25,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean isRunning, isFinished, fiveSec, popupAct, vibration, volume  = false;
+    private boolean isRunning, isFinished, fiveSec, popupAct, vibration, volume, timeout  = false;
 
     private TextView smlTimeVw, timeVw;
     private View playIcn, timeOutIcn, twoMinIcn, fiveMinIcn;
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
     private PopupWindow popupWindow;
     private LinearLayout linearLayout1;
 
-    private long mLastClickTimeCTime, mLastClickTimeVTime, mLastClickTimeVibr, mLastClickTimeSwt, mLastClickTimeTTime = 0;
+    private long mLastClickTimeCTime, mLastClickTimeVTime, mLastClickTimeVibr, mLastClickTimeSwt, mLastClickTimeTTime, savedTimer = 0;
 
-    private int hlColor;
+    private int hlColor, icnColor;
 
 
     @Override
@@ -52,11 +52,10 @@ public class MainActivity extends AppCompatActivity {
         int nightModeFlags = getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         switch (nightModeFlags) {
             case Configuration.UI_MODE_NIGHT_YES:
-                hlColor = R.color.activatedDark;
+                hlColor = R.color.white;
                 break;
-
             case Configuration.UI_MODE_NIGHT_NO:
-                //doStuff();
+                hlColor = R.color.activated;
                 break;
         }
 
@@ -164,11 +163,20 @@ public class MainActivity extends AppCompatActivity {
             mLastClickTimeSwt = SystemClock.elapsedRealtime();
             if(volume){
                 volume = false;
-                Toast.makeText(getApplicationContext(),"Schalter ausgeschaltet", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.function_of) + getResources().getString(R.string.volumeRocker) + getResources().getString(R.string.turned_off), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_volume).setBackground(null);
             }else{
                 volume = true;
-                Toast.makeText(getApplicationContext(),"Schalter eingeschaltet", Toast.LENGTH_LONG).show();
+                int nightModeFlags = getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+                switch (nightModeFlags) {
+                    case Configuration.UI_MODE_NIGHT_YES:
+                        hlColor = R.color.white;
+                        break;
+                    case Configuration.UI_MODE_NIGHT_NO:
+                        hlColor = R.color.activated;
+                        break;
+                }
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.function_of) + getResources().getString(R.string.volumeRocker) + getResources().getString(R.string.turned_on), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_volume).setBackgroundColor(hlColor);
             }
             return true;
@@ -178,11 +186,20 @@ public class MainActivity extends AppCompatActivity {
             mLastClickTimeVibr = SystemClock.elapsedRealtime();
             if(vibration){
                 vibration = false;
-                Toast.makeText(getApplicationContext(),"Vibration ausgeschaltet", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.vibration) + getResources().getString(R.string.turned_off), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_vibration).setBackground(null);
             }else{
                 vibration = true;
-                Toast.makeText(getApplicationContext(),"Vibration eingeschaltet", Toast.LENGTH_LONG).show();
+                int nightModeFlags = getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+                switch (nightModeFlags) {
+                    case Configuration.UI_MODE_NIGHT_YES:
+                        hlColor = R.color.white;
+                        break;
+                    case Configuration.UI_MODE_NIGHT_NO:
+                        hlColor = R.color.activated;
+                        break;
+                }
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.vibration) +"" + getResources().getString(R.string.turned_on), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_vibration).setBackgroundColor(hlColor);
             }
             return true;
@@ -265,40 +282,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void startTimer(){
         if(isRunning||isFinished) return;
-        isRunning=true;
-        int sec = Integer.valueOf(String.valueOf(timeVw.getText())) ;
-        if((String.valueOf(smlTimeVw.getText())).charAt(0)==':') {
-            sec = ((Integer.valueOf(String.valueOf(timeVw.getText())) * 60) + (Integer.valueOf(String.valueOf(smlTimeVw.getText()).replace(":",""))));
-        }
-        sec = sec * 1000;
-        playIcn.setBackgroundResource(R.drawable.ic_baseline_stop_24);
-        timer = new CountDownTimer(sec,10){
-            public void onTick(long millisUntilFinished){
-                if(millisUntilFinished > 60000) {
-                    timeVw.setText(String.valueOf(millisUntilFinished / 60000));
-                    smlTimeVw.setText(":" + String.valueOf((millisUntilFinished / 1000) % 60));
-                } else{
-                    timeVw.setText(String.valueOf(millisUntilFinished / 1000));
-                    smlTimeVw.setText("."+String.valueOf((millisUntilFinished % 1000)/100 ));
-                }
-                final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if((vibration&&millisUntilFinished<5100&&((millisUntilFinished % 1000)/100)==0))vibrator.vibrate(100);
-            }
-            @SuppressLint("ResourceAsColor")
-            public void onFinish(){
-                timeVw.setText("0");
-                smlTimeVw.setText(".0");
-                final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if(vibration)vibrator.vibrate(800);
-                playIcn.setBackgroundResource(R.drawable.ic_baseline_play_arrow_24);
-                isRunning=false;
-                isFinished=true;
-            }
-
-        };
-        timer.start();
+        int millisec = getTime();
+        startTimerAt(millisec);
     }
 
+    public int getTime(){
+        int millisec = 1000*(Integer.valueOf(String.valueOf(timeVw.getText())))+ (100*(Integer.valueOf(String.valueOf(smlTimeVw.getText()).replace(".","")))) ;
+        if((String.valueOf(smlTimeVw.getText())).charAt(0)==':') { //When time bigger than one minute
+            millisec = 1000*((Integer.valueOf(String.valueOf(timeVw.getText())) * 60) + (Integer.valueOf(String.valueOf(smlTimeVw.getText()).replace(":",""))));
+        }
+        return millisec;
+    }
 
     public void stopTimer(){
         if(isRunning){
@@ -317,6 +311,17 @@ public class MainActivity extends AppCompatActivity {
         isFinished=false;
     }
 
+    public void setDisplayTime(long millisec){
+        if(millisec > 60000) {
+            timeVw.setText(String.valueOf(millisec / 60000));
+            smlTimeVw.setText(":" + String.valueOf((millisec / 1000) % 60));
+        } else{
+            timeVw.setText(String.valueOf(millisec / 1000));
+            smlTimeVw.setText("."+String.valueOf((millisec % 1000)/100 ));
+        }
+
+    }
+
     public void restartTimer(){
         resetTimer();
         startTimer();
@@ -324,24 +329,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void timeout(){
         stopTimer();
-        startTimerAt(60);
+        timeout = true;
+        savedTimer = getTime();
+        startTimerAt(60000);
     }
 
     public void twoMinBrake(){
         stopTimer();
-        startTimerAt(120);
+        startTimerAt(120000);
     }
     public void fiveMinBrake(){
         stopTimer();
-        startTimerAt(300);
+        startTimerAt(300000);
     }
 
-    public void startTimerAt(int sec){
+    public void startTimerAt(int millisec){
         if(isRunning) return;
         isRunning=true;
-        sec = sec *1000;
         playIcn.setBackgroundResource(R.drawable.ic_baseline_stop_24);
-        timer = new CountDownTimer(sec,10){
+        timer = new CountDownTimer(millisec,10){
             public void onTick(long millisUntilFinished){
                 if(millisUntilFinished > 60000) {
                     timeVw.setText(String.valueOf(millisUntilFinished / 60000));
@@ -362,6 +368,11 @@ public class MainActivity extends AppCompatActivity {
                 playIcn.setBackgroundResource(R.drawable.ic_baseline_play_arrow_24);
                 isRunning=false;
                 isFinished=true;
+
+                if(timeout){
+                    timeout = false;
+                    setDisplayTime(savedTimer);
+                }
             }
 
         };

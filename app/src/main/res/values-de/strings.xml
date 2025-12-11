@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Intercrosse Timer</string>
+    <string name="help_title">" Bedienung:"</string>
+    <string name="help_text1">" Oben in der Leiste:"</string>
+    <string name="help_text2">" Ein- und Ausschalten der Funktion der Lautstärke-Tasten und der Vibration, Zeit umstellen (5 oder 30 Sekunden)."</string>
+    <string name="help_text3">Auf die Zahl drücken startet oder PAUSIERT den Timer.</string>
+    <string name="help_text4">" Auf das Play- bzw. Stop-Icon drücken startet und STOPPT den Timer."</string>
+    <string name="help_text5">" Das 1-/2-/5-Minuten-Icon startet den entsprechenden Timer sofort. "</string>
+    <string name="help_text6">" Beim Drücken der Leiser-Taste wird der Timer sofort neu gestartet. "</string>
+    <string name="help_text7">" Beim Drücken der Lauter-Taste wird der Timer pausiert oder wieder gestartet. "</string>
+    <string name="titel_5sec">" 5 Sekunden"</string>
+    <string name="titel_30sec">30 Sekunden</string>
+    <string name="understood">Verstanden</string>
+    <string name="function_of">"Die Funktion "</string>
+    <string name="turned_on">" wurde eingeschaltet."</string>
+    <string name="turned_off">" wurde ausgeschaltet."</string>
+    <string name="vibration">Die Vibration</string>
+    <string name="volumeRocker">der Lautstärkewippe</string>
+</resources>

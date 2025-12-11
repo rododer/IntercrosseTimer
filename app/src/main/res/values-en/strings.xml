@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Intercrosse Timer</string>
-    <string name="help_title">manual:</string>
     <string name="help_text1">In the status bar</string>
+    <string name="help_title">Manual:</string>
     <string name="help_text2">Turn on and off the functionallity of the volume rocker, vibration, switch time (5 or 30 seconds)</string>
+    <string name="help_text3">Tapping the number starts and  pauses the timer.</string>
     <string name="help_text4">Tapping the play or stop icon starts and STOPS the timer.</string>
     <string name="help_text5">The 1 / 2 / 5 minute icon starts the corresponding timer immediately.</string>
     <string name="help_text6">Tapping the volume down button restarts the timer immediately.</string>
@@ -10,12 +12,9 @@
     <string name="titel_5sec">5 Seconds</string>
     <string name="titel_30sec">30 Seconds</string>
     <string name="understood">understood</string>
-    <string name="help_text3">Tapping the number starts and  pauses the timer.</string>
-    <string name="function_of">"function of "</string>
+    <string name="function_of">"The funcion of "</string>
     <string name="turned_on">" is turned on."</string>
     <string name="turned_off">" is turned off."</string>
     <string name="vibration">Vibration</string>
     <string name="volumeRocker">the volume rocker</string>
-    <string name="number_thirty" translatable="false">30</string>
-    <string name="number_point_zero" translatable="false">.0</string>
 </resources>

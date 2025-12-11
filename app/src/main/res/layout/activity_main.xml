@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/nearblack"
+    android:background="@color/background"
     tools:context=".MainActivity"
     android:id="@+id/layout_main"
     android:layout_alignParentTop="true"
@@ -21,8 +21,8 @@
         android:layout_marginRight="5dp"
         android:padding="1dp"
         android:gravity="center"
-        android:text="30"
-        android:textColor="@color/nearwhite"
+        android:text="@string/number_thirty"
+        android:textColor="@color/text"
         app:autoSizeTextType="uniform"
         app:autoSizeMinTextSize="200dp"
         app:autoSizeMaxTextSize="300dp"
@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:text=".0"
-        android:textColor="@color/nearwhite"
+        android:text="@string/number_point_zero"
+        android:textColor="@color/text"
         android:textSize="50sp">
     </TextView>
     <View

@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/clr5"
+        android:background="@color/backgroundAccent"
         android:orientation="vertical"
         android:padding="20dip">
 
@@ -24,7 +24,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_title"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="50sp">
             </TextView>
 
@@ -35,7 +35,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text1"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
             <TextView
@@ -44,7 +44,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text2"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text3"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text4"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text5"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
             <TextView
@@ -80,7 +80,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text6"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
             <TextView
@@ -89,7 +89,7 @@
                 android:layout_gravity="center"
                 android:text="@string/help_text7"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/text"
                 android:textSize="20sp">
             </TextView>
         </LinearLayout>

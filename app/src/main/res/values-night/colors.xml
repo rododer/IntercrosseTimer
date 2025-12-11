@@ -5,9 +5,9 @@
     <color name="clr3">#FF738797</color>
     <color name="clr4">#FF8B674D</color>
     <color name="clr5">#FF171D26</color>
-    <color name="text">#FF010101</color>
-    <color name="background">#D1D1D1</color>
-    <color name="backgroundAccent">#878787</color>
+    <color name="text">#FFF0F0F0</color>
+    <color name="background">#FF010101</color>
+    <color name="backgroundAccent">#2C2C2C</color>
     <color name="nearblack">#FF202020</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
