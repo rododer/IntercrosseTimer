@@ -1,3 +1,5 @@
+[Click here to download the APK!](app/release/app-release.apk)
+
 ENGLISH VERSION BELOW
 This App is in english and german
 
