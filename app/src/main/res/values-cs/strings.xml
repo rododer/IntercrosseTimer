@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Intercrosse Timer</string>
+    <string name="help_title">Návod:</string>
+    <string name="help_text1">V horní liště:</string>
+    <string name="help_text2">Zapnutí nebo vypnutí funkce tlačítek hlasitosti a vibrace, přepnutí času (5 nebo 30 sekund).</string>
+    <string name="help_text3">Stisknutí čísla spustí nebo POZASTAVÍ časovač.</string>
+    <string name="help_text4">Stisknutí ikony přehrávání nebo zastavení spustí nebo ZASTAVÍ časovač.</string>
+    <string name="help_text5" tools:ignore="TypographyFractions">Ikona 1 / 2 / 5 minut okamžitě spustí odpovídající časovač.</string>
+    <string name="help_text6">Stisknutím tlačítka pro snížení hlasitosti se časovač okamžitě restartuje.</string>
+    <string name="help_text7">Stisknutím tlačítka pro zvýšení hlasitosti se časovač pozastaví nebo znovu spustí.</string>
+    <string name="titel_5sec">5 sekund</string>
+    <string name="titel_30sec">30 sekund</string>
+    <string name="understood">Rozumím</string>
+    <string name="function_of">Funkce </string>
+    <string name="turned_on"> byla zapnuta.</string>
+    <string name="turned_off"> byla vypnuta.</string>
+    <string name="vibration">vibrace</string>
+    <string name="volumeRocker">tlačítek hlasitosti</string>
+</resources>

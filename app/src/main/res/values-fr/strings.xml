@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Intercrosse Timer</string>
+    <string name="help_title">Mode d’emploi :</string>
+    <string name="help_text1">Dans la barre supérieure :</string>
+    <string name="help_text2">Activer ou désactiver la fonctionnalité des boutons de volume et de la vibration, changer le temps (5 ou 30 secondes).</string>
+    <string name="help_text3">Appuyer sur le nombre démarre ou met en PAUSE le minuteur.</string>
+    <string name="help_text4">Appuyer sur l’icône lecture ou arrêt démarre ou ARRÊTE le minuteur.</string>
+    <string name="help_text5" tools:ignore="TypographyFractions">L’icône 1 / 2 / 5 minutes lance immédiatement le minuteur correspondant.</string>
+    <string name="help_text6">Appuyer sur le bouton de diminution du volume redémarre immédiatement le minuteur.</string>
+    <string name="help_text7">Appuyer sur le bouton d’augmentation du volume met en pause ou redémarre le minuteur.</string>
+    <string name="titel_5sec">5 secondes</string>
+    <string name="titel_30sec">30 secondes</string>
+    <string name="understood">Compris</string>
+    <string name="function_of">La fonction </string>
+    <string name="turned_on"> a été activée.</string>
+    <string name="turned_off"> a été désactivée.</string>
+    <string name="vibration">la vibration</string>
+    <string name="volumeRocker">du bouton de volume</string>
+</resources>
