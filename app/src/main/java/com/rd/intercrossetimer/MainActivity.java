@@ -1,7 +1,6 @@
 package com.rd.intercrossetimer;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -163,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             mLastClickTimeSwt = SystemClock.elapsedRealtime();
             if(volume){
                 volume = false;
-                Toast.makeText(getApplicationContext(),getResources().getString(R.string.function_of) + getResources().getString(R.string.volumeRocker) + getResources().getString(R.string.turned_off), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.volumeRockerOff), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_volume).setBackground(null);
             }else{
                 volume = true;
@@ -176,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                         hlColor = R.color.activated;
                         break;
                 }
-                Toast.makeText(getApplicationContext(),getResources().getString(R.string.function_of) + getResources().getString(R.string.volumeRocker) + getResources().getString(R.string.turned_on), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.volumeRockerOn), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_volume).setBackgroundColor(hlColor);
             }
             return true;
@@ -186,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
             mLastClickTimeVibr = SystemClock.elapsedRealtime();
             if(vibration){
                 vibration = false;
-                Toast.makeText(getApplicationContext(),getResources().getString(R.string.vibration) + getResources().getString(R.string.turned_off), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getString(R.string.vibrationOff), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_vibration).setBackground(null);
             }else{
                 vibration = true;
@@ -199,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                         hlColor = R.color.activated;
                         break;
                 }
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.vibration) +"" + getResources().getString(R.string.turned_on), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.vibrationOn), Toast.LENGTH_LONG).show();
                 findViewById(R.id.action_item_vibration).setBackgroundColor(hlColor);
             }
             return true;

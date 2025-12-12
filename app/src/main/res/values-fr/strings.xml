@@ -12,9 +12,8 @@
     <string name="titel_5sec">5 secondes</string>
     <string name="titel_30sec">30 secondes</string>
     <string name="understood">Compris</string>
-    <string name="function_of">La fonction </string>
-    <string name="turned_on"> a été activée.</string>
-    <string name="turned_off"> a été désactivée.</string>
-    <string name="vibration">la vibration</string>
-    <string name="volumeRocker">du bouton de volume</string>
+    <string name="vibrationOn">Les vibrations sont activées.</string>
+    <string name="volumeRockerOff">La fonction de réglage du volume est désactivée.</string>
+    <string name="volumeRockerOn">La fonction de réglage du volume est activée.</string>
+    <string name="vibrationOff">Les vibrations sont désactivées.</string>
 </resources>

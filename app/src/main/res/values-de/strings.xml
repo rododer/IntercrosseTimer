@@ -12,9 +12,8 @@
     <string name="titel_5sec">" 5 Sekunden"</string>
     <string name="titel_30sec">30 Sekunden</string>
     <string name="understood">Verstanden</string>
-    <string name="function_of">"Die Funktion "</string>
-    <string name="turned_on">" wurde eingeschaltet."</string>
-    <string name="turned_off">" wurde ausgeschaltet."</string>
-    <string name="vibration">Die Vibration</string>
-    <string name="volumeRocker">der Lautstärkewippe</string>
+    <string name="vibrationOn">Die Vibration ist aktiviert.</string>
+    <string name="volumeRockerOff">Die Funktion der Lautstärkewippe ist ausgeschaltet.</string>
+    <string name="volumeRockerOn">Die Funktion der Lautstärkewippe ist eingeschaltet.</string>
+    <string name="vibrationOff">Die Vibration ist deaktiviert.</string>
 </resources>

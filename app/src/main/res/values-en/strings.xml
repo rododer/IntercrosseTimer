@@ -12,9 +12,8 @@
     <string name="titel_5sec">5 Seconds</string>
     <string name="titel_30sec">30 Seconds</string>
     <string name="understood">understood</string>
-    <string name="function_of">"The funcion of "</string>
-    <string name="turned_on">" is turned on."</string>
-    <string name="turned_off">" is turned off."</string>
-    <string name="vibration">Vibration</string>
-    <string name="volumeRocker">the volume rocker</string>
+    <string name="vibrationOn">Vibration is enabled.</string>
+    <string name="volumeRockerOff">The volume rocker function is disabled.</string>
+    <string name="volumeRockerOn">The volume rocker function is enabled.</string>
+    <string name="vibrationOff">Vibration is disabled.</string>
 </resources>
