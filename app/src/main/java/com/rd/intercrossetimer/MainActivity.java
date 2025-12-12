@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private PopupWindow popupWindow;
     private LinearLayout linearLayout1;
 
-    private long mLastClickTimeCTime, mLastClickTimeVTime, mLastClickTimeVibr, mLastClickTimeSwt, mLastClickTimeTTime, savedTimer = 0;
+    private long mLastClickTimeCTime, mLastClickTimeVTime, mLastClickTimeVibr, mLastClickTimeSwt, mLastClickTimeTTime, savedTimer, timeoutVibration = 0;
 
     private int hlColor, icnColor;
 
@@ -357,7 +357,10 @@ public class MainActivity extends AppCompatActivity {
                     smlTimeVw.setText("."+String.valueOf((millisUntilFinished % 1000)/100 ));
                 }
                 final Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if((vibration&&millisUntilFinished<5100&&((millisUntilFinished % 1000)/100)==0))vibrator.vibrate(100);
+                if((vibration&&millisUntilFinished<5100&&((millisUntilFinished % 1000)/100)==0)&&SystemClock.elapsedRealtime() - timeoutVibration > 800){
+                    timeoutVibration = SystemClock.elapsedRealtime();
+                    vibrator.vibrate(100);
+                }
             }
             @SuppressLint("ResourceAsColor")
             public void onFinish(){
@@ -372,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
                 if(timeout){
                     timeout = false;
                     setDisplayTime(savedTimer);
+                    isFinished = false;
                 }
             }
 

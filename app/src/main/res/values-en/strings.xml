@@ -7,8 +7,8 @@
     <string name="help_text3">Tapping the number starts and  pauses the timer.</string>
     <string name="help_text4">Tapping the play or stop icon starts and STOPS the timer.</string>
     <string name="help_text5">The 1 / 2 / 5 minute icon starts the corresponding timer immediately.</string>
-    <string name="help_text6">Tapping the volume down button restarts the timer immediately.</string>
-    <string name="help_text7">Tapping the volume up button pauses or restarts the timer.</string>
+    <string name="help_text6">Pressing the volume down button restarts the timer immediately.</string>
+    <string name="help_text7">Pressing the volume up button pauses or restarts the timer.</string>
     <string name="titel_5sec">5 Seconds</string>
     <string name="titel_30sec">30 Seconds</string>
     <string name="understood">understood</string>
